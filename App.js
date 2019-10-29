@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { FlatList, ActivityIndicator, Text, View } from 'react-native';
 
-export default class FetchExample extends React.Component {
+import Nav from './components/nav';
+
+export default class App extends Component {
 
   constructor(props) {
     super(props);
@@ -30,9 +32,11 @@ export default class FetchExample extends React.Component {
 
   render() {
 
+
     if (this.state.isLoading) {
       return (
         <View style={{ flex: 1, padding: 20 }}>
+          <Nav />
           <ActivityIndicator />
         </View>
       )
@@ -40,6 +44,7 @@ export default class FetchExample extends React.Component {
 
     return (
       <View style={{ flex: 1, paddingTop: 20 }}>
+        <Nav />
         <FlatList
           data={this.state.dataSource}
           renderItem={({ item }) => <Text>{item.attributes.name}</Text>}
