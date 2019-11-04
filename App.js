@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { FlatList, ActivityIndicator, Text, View } from 'react-native';
 
 import Nav from './components/nav';
+import ProductCard from './components/product';
 
 export default class App extends Component {
 
@@ -43,11 +44,11 @@ export default class App extends Component {
     }
 
     return (
-      <View style={{ flex: 1, paddingTop: 20 }}>
+      <View style={{ flex: 1, paddingTop: 50, backgroundColor: '#eee' }}>
         <Nav />
         <FlatList
           data={this.state.dataSource}
-          renderItem={({ item }) => <Text>{item.attributes.name}</Text>}
+          renderItem={({ item }) => < ProductCard product_name={item.attributes.name} />}
           keyExtractor={({ id }, index) => id}
         />
       </View>

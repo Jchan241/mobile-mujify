@@ -12,7 +12,6 @@ const Nav = props => {
 
 const styles = StyleSheet.create({
   nav: {
-    padding: 10
   }
 })
 
