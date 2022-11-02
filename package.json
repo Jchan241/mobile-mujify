@@ -10,7 +10,7 @@
   "dependencies": {
     "@react-navigation/bottom-tabs": "^5.4.2",
     "expo": "^37.0.0",
-    "expo-cli": "^3.20.3",
+    "expo-cli": "^6.0.6",
     "global": "^4.4.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",
